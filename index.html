@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapchef - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Rapchef</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li>
+                <li><a href="peca-sua-geladeira.html">Peça a sua geladeira</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Alimentação 24/7 em Comodato</h1>
+            <p>Geladeiras inteligentes com self-service completo, instaladas sem custos. Refeições caseiras prontas a qualquer hora, com pagamento integrado e variedade garantida.</p>
+        </section>
+
+        <section class="features">
+            <h2>Por que escolher a Rapchef?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Disponibilidade Total</h3>
+                    <p>Disponibilidade 24 horas por dia, 7 dias por semana</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Variedade</h3>
+                    <p>35 tipos de refeições caseiras diferentes</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Qualidade Premium</h3>
+                    <p>Refeições sem conservantes e de extrema qualidade</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Pagamento Flexível</h3>
+                    <p>Cartão, VR, VA e PIX</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Benefícios para Todos</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Para Moradores e Colaboradores</h3>
+                    <ul>
+                        <li>Acesso 24/7 a refeições de qualidade</li>
+                        <li>35 tipos de refeições diferentes</li>
+                        <li>Sem necessidade de aplicativos</li>
+                        <li>Pagamento flexível: Cartão, VR, VA e PIX</li>
+                    </ul>
+                </div>
+                <div class="benefit-card">
+                    <h3>Para Condomínios e Empresas</h3>
+                    <ul>
+                        <li>Instalação e manutenção com custo zero</li>
+                        <li>Segurança integrada</li>
+                        <li>Valorização do imóvel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <h2>Vamos Começar?</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Entre em contato para agendar uma conversa</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Envio do Kit degustação</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Proposta personalizada e fechamento do negócio</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <p>Instalação rápida e início da operação</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Experimente nossas refeições e transforme seu espaço!</h2>
+            <p>Mais do que geladeiras inteligentes, oferecemos uma solução completa que agrega valor, gera receita e melhora a qualidade de vida de moradores e colaboradores.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5511942015999" target="_blank" class="btn-primary">Entre em Contato</a>
+                <a href="peca-sua-geladeira.html" class="btn-secondary">Peça sua Geladeira</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Rapchef. Todos os direitos reservados.</p>
+            <div class="footer-contacts">
+                <a href="mailto:michael.mm@rapchef.com.br" class="footer-link">
+                    📧 michael.mm@rapchef.com.br
+                </a>
+                <a href="https://wa.me/551194723641" target="_blank" class="footer-link">
+                    📱 +55 11 94723-641
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.querySelector('nav .nav-links');
+
+        if (mobileMenuToggle && navLinks) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
