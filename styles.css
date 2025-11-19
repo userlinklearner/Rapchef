@@ -7,12 +7,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #333333;
+    background-color: #FFF8F0;
 }
 
 /* Header & Navigation */
 header {
-    background-color: #34495e;
+    background-color: #4A3A2A;
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
@@ -44,7 +45,7 @@ nav {
 }
 
 .nav-links a {
-    color: #ecf0f1;
+    color: #FFF8F0;
     text-decoration: none;
     transition: all 0.3s;
     padding: 0.8rem 1.5rem;
@@ -53,15 +54,11 @@ nav {
     font-weight: 500;
 }
 
-.nav-links a:hover {
-    background-color: #667eea;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
+.nav-links a:hover,
 .nav-links a.active {
-    background-color: #667eea;
-    color: #fff;
+    background-color: #F78B1F;
+    color: #4A3A2A;
+    transform: translateY(-2px);
 }
 
 .mobile-menu-toggle {
@@ -74,13 +71,13 @@ nav {
 .mobile-menu-toggle span {
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #FFF8F0;
     border-radius: 2px;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #F78B1F 0%, #4A3A2A 100%);
     color: white;
     text-align: center;
     padding: 5rem 2rem;
@@ -100,14 +97,14 @@ nav {
 /* Features Section */
 .features {
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    background-color: #F2F2F2;
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #4A3A2A;
 }
 
 .features-grid {
@@ -119,7 +116,7 @@ nav {
 }
 
 .feature-item {
-    background: white;
+    background: #FFF8F0;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -133,7 +130,7 @@ nav {
 }
 
 .feature-item h3 {
-    color: #667eea;
+    color: #F78B1F;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -141,14 +138,14 @@ nav {
 /* Benefits Section */
 .benefits {
     padding: 4rem 2rem;
-    background-color: #fff;
+    background-color: #FFF8F0;
 }
 
 .benefits h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #4A3A2A;
 }
 
 .benefits-grid {
@@ -160,14 +157,14 @@ nav {
 }
 
 .benefit-card {
-    background: #f8f9fa;
+    background: #F2F2F2;
     padding: 2.5rem;
     border-radius: 10px;
-    border-left: 5px solid #667eea;
+    border-left: 5px solid #F78B1F;
 }
 
 .benefit-card h3 {
-    color: #2c3e50;
+    color: #4A3A2A;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -186,14 +183,14 @@ nav {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #F78B1F;
     font-weight: bold;
 }
 
 /* Process Section */
 .process {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #F78B1F 0%, #4A3A2A 100%);
     color: white;
 }
 
@@ -231,8 +228,8 @@ nav {
 .step-number {
     width: 60px;
     height: 60px;
-    background: white;
-    color: #667eea;
+    background: #FFF8F0;
+    color: #4A3A2A;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -250,7 +247,7 @@ nav {
 /* CTA Section */
 .cta {
     padding: 4rem 2rem;
-    background-color: #2c3e50;
+    background-color: #4A3A2A;
     color: white;
     text-align: center;
 }
@@ -284,29 +281,29 @@ nav {
 }
 
 .btn-primary {
-    background-color: #667eea;
-    color: white;
+    background-color: #F78B1F;
+    color: #FFF8F0;
 }
 
 .btn-primary:hover {
-    background-color: #764ba2;
+    background-color: #E07919;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: #FFF8F0;
+    border: 2px solid #FFF8F0;
 }
 
 .btn-secondary:hover {
-    background-color: white;
-    color: #2c3e50;
+    background-color: #FFF8F0;
+    color: #4A3A2A;
 }
 
 /* Footer */
 footer {
-    background-color: #1a252f;
+    background-color: #4A3A2A;
     color: white;
     padding: 2rem;
     text-align: center;
@@ -332,12 +329,12 @@ footer {
 }
 
 .footer-link:hover {
-    color: #667eea;
+    color: #F78B1F;
 }
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #F78B1F 0%, #4A3A2A 100%);
     color: white;
     text-align: center;
     padding: 4rem 2rem;
@@ -355,7 +352,7 @@ footer {
 /* Menu Display Page */
 .menu-display {
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    background-color: #F2F2F2;
 }
 
 .menu-container {
@@ -380,7 +377,7 @@ footer {
 
 .menu-note {
     margin-top: 1rem;
-    color: #666;
+    color: #4A3A2A;
     font-style: italic;
 }
 
@@ -401,11 +398,11 @@ footer {
     margin-bottom: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #F78B1F;
 }
 
 .faq-item h3 {
-    color: #2c3e50;
+    color: #4A3A2A;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -417,7 +414,7 @@ footer {
 
 .contact-help {
     text-align: center;
-    background: #f8f9fa;
+    background: #F2F2F2;
     padding: 3rem 2rem;
     border-radius: 10px;
 }
@@ -425,7 +422,7 @@ footer {
 .contact-help h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #4A3A2A;
 }
 
 .help-buttons {
@@ -483,14 +480,14 @@ footer {
 }
 
 .request-info {
-    background: #f8f9fa;
+    background: #F2F2F2;
     padding: 2.5rem;
     border-radius: 10px;
     margin-bottom: 3rem;
 }
 
 .request-info h2 {
-    color: #2c3e50;
+    color: #4A3A2A;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
 }
@@ -512,13 +509,13 @@ footer {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #F78B1F;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 .request-form {
-    background: white;
+    background: #FFF8F0;
     padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -526,7 +523,7 @@ footer {
 }
 
 .request-form h2 {
-    color: #2c3e50;
+    color: #4A3A2A;
     margin-bottom: 2rem;
     font-size: 1.8rem;
 }
@@ -538,7 +535,7 @@ footer {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #2c3e50;
+    color: #4A3A2A;
     font-weight: 500;
 }
 
@@ -558,7 +555,7 @@ footer {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #F78B1F;
 }
 
 .request-form button[type="submit"] {
@@ -571,7 +568,7 @@ footer {
 
 .direct-contact {
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #F78B1F 0%, #4A3A2A 100%);
     color: white;
     padding: 3rem 2rem;
     border-radius: 10px;
@@ -614,7 +611,7 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #34495e;
+        background-color: #4A3A2A;
         flex-direction: column;
         gap: 0;
         padding: 1rem 0;
