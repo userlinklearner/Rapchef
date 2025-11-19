@@ -7,56 +7,66 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Rapchef</div>
-            <ul class="nav-links">
+    <header class="nav">
+        <div class="container nav__inner">
+            <a href="index.html" class="nav__logo">RapChef</a>
+            <button class="nav__toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                <li><a href="cardapio.html" class="is-active">Cardápio</a></li>
                 <li><a href="ajuda.html">Ajuda</a></li>
                 <li><a href="peca-sua-geladeira.html">Peça a sua geladeira</a></li>
             </ul>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Nosso Cardápio</h1>
-            <p>Confira todas as opções disponíveis</p>
+        <section class="section">
+            <div class="container page-hero">
+                <div class="page-hero__inner">
+                    <h1 class="page-hero__title">Nosso Cardápio</h1>
+                    <p class="page-hero__subtitle">Confira todas as opções disponíveis</p>
+                </div>
+            </div>
         </section>
 
-        <section class="menu-display">
-            <div class="menu-container">
-                <img src="cardapio.jpg" alt="Cardápio Rapchef" class="menu-image">
+        <section class="section section--compact">
+            <div class="container menu-display">
+                <div class="menu-display__inner">
+                    <div class="menu-display__frame">
+                        <img src="cardapio.jpg" alt="Cardápio RapChef" class="menu-display__image">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2024 Rapchef. Todos os direitos reservados.</p>
             <div class="footer-contacts">
                 <a href="mailto:michael.mm@rapchef.com.br" class="footer-link">
                     📧 michael.mm@rapchef.com.br
                 </a>
-                <a href="https://wa.me/551194723641" target="_blank" class="footer-link">
-                    📱 +55 11 94723-641
+                <a href="https://wa.me/5511947223641" target="_blank" class="footer-link">
+                    📱 +55 11 94722-3641
                 </a>
             </div>
         </div>
     </footer>
     <script>
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navLinks = document.querySelector('nav .nav-links');
+        const navLinks = document.getElementById('navLinks');
 
         if (mobileMenuToggle && navLinks) {
             mobileMenuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+                const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinks.classList.toggle('is-open');
             });
         }
     </script>

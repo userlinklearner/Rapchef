@@ -3,167 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapchef - Peça a sua geladeira</title>
+    <title>RapChef - Peça a sua geladeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Rapchef</div>
-            <ul class="nav-links">
+    <header class="nav">
+        <div class="container nav__inner">
+            <a href="index.html" class="nav__logo">RapChef</a>
+            <button class="nav__toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="ajuda.html">Ajuda</a></li>
-                <li><a href="peca-sua-geladeira.html" class="active">Peça a sua geladeira</a></li>
+                <li><a href="peca-sua-geladeira.html" class="is-active">Peça a sua geladeira</a></li>
             </ul>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Solicite sua Geladeira Rapchef</h1>
-            <p>Preencha o formulário ou entre em contato diretamente</p>
+        <section class="section">
+            <div class="container page-hero">
+                <div class="page-hero__inner">
+                    <h1 class="page-hero__title">Solicite sua Geladeira RapChef</h1>
+                    <p class="page-hero__subtitle">Preencha o formulário ou entre em contato diretamente para levar refeições caseiras 24/7 ao seu espaço.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="request-content">
-            <div class="request-info">
-                <h2>Por que ter uma geladeira Rapchef?</h2>
-                <ul class="benefits-list">
-                    <li>Instalação e manutenção com custo zero</li>
-                    <li>Alimentação 24/7 para moradores ou colaboradores</li>
-                    <li>35 tipos de refeições caseiras diferentes</li>
-                    <li>Sistema totalmente automatizado</li>
-                    <li>Valorização do imóvel</li>
-                    <li>Segurança integrada</li>
-                </ul>
+        <section class="section">
+            <div class="container request-grid">
+                <article class="card request-card">
+                    <h2>Por que ter uma geladeira RapChef?</h2>
+                    <ul>
+                        <li>Instalação e manutenção com custo zero.</li>
+                        <li>Alimentação 24/7 para moradores ou colaboradores.</li>
+                        <li>35 tipos de refeições caseiras diferentes.</li>
+                        <li>Sistema totalmente automatizado.</li>
+                        <li>Valorização do imóvel.</li>
+                        <li>Segurança integrada.</li>
+                    </ul>
+                </article>
+
+                <article class="card form-card">
+                    <h2>Formulário de Solicitação</h2>
+                    <form id="fridgeRequestForm" class="form">
+                        <div class="form__grid form__grid--two">
+                            <div class="form__group form__group--full">
+                                <label for="name">Nome Completo *</label>
+                                <input type="text" id="name" name="name" required class="form__control">
+                            </div>
+                            <div class="form__group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required class="form__control">
+                            </div>
+                            <div class="form__group">
+                                <label for="phone">Telefone/WhatsApp *</label>
+                                <input type="tel" id="phone" name="phone" required class="form__control">
+                            </div>
+                            <div class="form__group form__group--full">
+                                <label for="type">Tipo de Estabelecimento *</label>
+                                <select id="type" name="type" required class="form__control">
+                                    <option value="">Selecione...</option>
+                                    <option value="condominio">Condomínio Residencial</option>
+                                    <option value="empresa">Empresa</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form__group form__group--full">
+                                <label for="address">Endereço *</label>
+                                <input type="text" id="address" name="address" required class="form__control">
+                            </div>
+                            <div class="form__group">
+                                <label for="people">Número estimado de pessoas</label>
+                                <input type="number" id="people" name="people" min="1" class="form__control">
+                            </div>
+                            <div class="form__group form__group--full">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" rows="4" class="form__control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__actions">
+                            <button type="submit" class="btn btn-primary form__submit">Enviar Solicitação</button>
+                        </div>
+                    </form>
+                </article>
             </div>
+        </section>
 
-            <div class="request-form">
-                <h2>Formulário de Solicitação</h2>
-                <form id="fridgeRequestForm">
-                    <div class="form-group">
-                        <label for="name">Nome Completo *</label>
-                        <input type="text" id="name" name="name" required>
+        <section class="section section--compact">
+            <div class="container">
+                <div class="contact-banner">
+                    <h2 class="section__title">Prefere falar diretamente?</h2>
+                    <p>Entre em contato conosco agora mesmo e descubra como implementar a RapChef no seu espaço.</p>
+                    <div class="contact-banner__actions">
+                        <a href="https://wa.me/5511947223641" target="_blank" class="btn btn-primary">WhatsApp</a>
+                        <a href="mailto:michael.mm@rapchef.com.br" class="btn btn-ghost">E-mail</a>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Telefone/WhatsApp *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="type">Tipo de Estabelecimento *</label>
-                        <select id="type" name="type" required>
-                            <option value="">Selecione...</option>
-                            <option value="condominio">Condomínio Residencial</option>
-                            <option value="empresa">Empresa</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="address">Endereço *</label>
-                        <input type="text" id="address" name="address" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="people">Número estimado de pessoas</label>
-                        <input type="number" id="people" name="people" min="1">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary">Enviar Solicitação</button>
-                </form>
-            </div>
-
-            <div class="direct-contact">
-                <h2>Prefere falar diretamente?</h2>
-                <p>Entre em contato conosco agora mesmo!</p>
-                <div class="contact-buttons">
-                    <a href="https://wa.me/5511947223641" target="_blank" class="btn-primary">WhatsApp</a>
-                    <a href="mailto:michael.mm@rapchef.com.br" class="btn-secondary">E-mail</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Rapchef. Todos os direitos reservados.</p>
-            <div class="footer-contacts">
-                <a href="mailto:michael.mm@rapchef.com.br" class="footer-link">
-                    📧 michael.mm@rapchef.com.br
-                </a>
-                <a href="https://wa.me/5511947223641" target="_blank" class="footer-link">
-                    📱 +55 11 94723-641
-                </a>
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <h3>RapChef</h3>
+                <p>Autonomia, sabor e cuidado em cada refeição para empresas e condomínios.</p>
+            </div>
+            <div class="footer__links">
+                <strong>Explore</strong>
+                <a href="index.html">Home</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="peca-sua-geladeira.html">Peça a sua geladeira</a>
+            </div>
+            <div class="footer__links footer__contact">
+                <strong>Contato</strong>
+                <a href="mailto:michael.mm@rapchef.com.br">📧 michael.mm@rapchef.com.br</a>
+                <a href="https://wa.me/5511947223641" target="_blank">📱 +55 11 94722-3641</a>
+            </div>
+            <div class="footer__legal">
+                &copy; 2024 RapChef. Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
     <script>
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navLinks = document.querySelector('nav .nav-links');
+        const navLinks = document.getElementById('navLinks');
 
         if (mobileMenuToggle && navLinks) {
             mobileMenuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+                const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinks.classList.toggle('is-open');
             });
         }
 
-        document.getElementById('fridgeRequestForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impedir o envio padrão do formulário
-            
-            // Coletar dados do formulário
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Montar mensagem
-            let message = `*Novo pedido de geladeira:*\n\n`;
-            message += `*Nome:* ${data.name}\n`;
-            message += `*E-mail:* ${data.email}\n`;
-            message += `*Telefone:* ${data.phone}\n`;
-            message += `*Tipo de Estabelecimento:* ${data.type}\n`;
-            message += `*Endereço:* ${data.address}\n`;
-            message += `*Número de pessoas:* ${data.people || 'Não informado'}\n`;
-            message += `*Mensagem:* ${data.message || 'Sem mensagem'}`;
-            
-            // Adicionar observações se foram preenchidas
-            if (data.observacoes && data.observacoes.trim() !== '') {
-                message += `\n\n*Observações:*\n${data.observacoes}`;
-            }
+        const requestForm = document.getElementById('fridgeRequestForm');
 
-            // Número do WhatsApp (formato internacional sem + e espaços)
-            const phoneNumber = '5511947223641';
-            
-            // Codificar a mensagem para URL
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Criar URL do WhatsApp
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
-            // Abrir WhatsApp em nova aba
-            window.open(whatsappURL, '_blank');
-            
-            // Limpar formulário
-            event.target.reset();
-            
-            alert('Redirecionando para WhatsApp. Por favor, envie a mensagem para completar sua solicitação de geladeira!');
-        });
+        if (requestForm) {
+            requestForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData.entries());
+
+                let message = `*Novo pedido de geladeira:*\n\n`;
+                message += `*Nome:* ${data.name}\n`;
+                message += `*E-mail:* ${data.email}\n`;
+                message += `*Telefone:* ${data.phone}\n`;
+                message += `*Tipo de Estabelecimento:* ${data.type}\n`;
+                message += `*Endereço:* ${data.address}\n`;
+                message += `*Número de pessoas:* ${data.people || 'Não informado'}\n`;
+                message += `*Mensagem:* ${data.message || 'Sem mensagem'}`;
+
+                const phoneNumber = '5511947223641';
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+                window.open(whatsappURL, '_blank');
+                event.target.reset();
+                alert('Redirecionando para WhatsApp. Por favor, envie a mensagem para completar sua solicitação de geladeira!');
+            });
+        }
     </script>
 </body>
 </html>

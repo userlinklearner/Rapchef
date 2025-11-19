@@ -3,141 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapchef - Ajuda</title>
+    <title>RapChef - Ajuda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Rapchef</div>
-            <ul class="nav-links">
+    <header class="nav">
+        <div class="container nav__inner">
+            <a href="index.html" class="nav__logo">RapChef</a>
+            <button class="nav__toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cardapio.html">Cardápio</a></li>
-                <li><a href="ajuda.html" class="active">Ajuda</a></li>
+                <li><a href="ajuda.html" class="is-active">Ajuda</a></li>
                 <li><a href="peca-sua-geladeira.html">Peça a sua geladeira</a></li>
             </ul>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Como Podemos Ajudar?</h1>
-            <p>Perguntas frequentes e informações úteis</p>
-        </section>
-
-        <section class="help-content">
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h3>Como funciona o sistema Rapchef?</h3>
-                    <p>Instalamos geladeiras inteligentes com refeições prontas em seu condomínio ou empresa, sem custos de instalação. Os usuários podem escolher e pagar diretamente na geladeira 24/7.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Quais formas de pagamento são aceitas?</h3>
-                    <p>Aceitamos cartão de crédito, débito, Vale Refeição (VR), Vale Alimentação (VA) e PIX.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>As refeições são saudáveis?</h3>
-                    <p>Sim! Todas as nossas refeições são caseiras, sem conservantes e de extrema qualidade.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Quantas opções de refeições há?</h3>
-                    <p>Oferecemos 35 tipos diferentes de refeições caseiras, garantindo variedade e qualidade.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Preciso de um aplicativo?</h3>
-                    <p>Não! O sistema é totalmente self-service na própria geladeira. Sem complicações.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Como solicitar uma geladeira?</h3>
-                    <p>Entre em contato conosco através do WhatsApp ou visite a página "Peça a sua geladeira" para mais informações.</p>
-                </div>
-            </div>
-
-            <div class="contact-help">
-                <h2>Ainda tem dúvidas?</h2>
-                <p>Entre em contato conosco!</p>
-                <div class="help-buttons">
-                    <a href="https://wa.me/5511947223641" target="_blank" class="btn-primary">Falar no WhatsApp</a>
-                    <a href="mailto:michael.mm@rapchef.com.br" class="btn-primary">Enviar E-mail</a>
+        <section class="section">
+            <div class="container page-hero">
+                <div class="page-hero__inner">
+                    <h1 class="page-hero__title">Como Podemos Ajudar?</h1>
+                    <p class="page-hero__subtitle">Pernas frequentes, suporte rápido e informações úteis para aproveitar ao máximo a RapChef.</p>
                 </div>
             </div>
         </section>
 
-        <section class="help-form-section">
-            <div class="help-form-wrapper">
-                <h2>Envie sua solicitação de suporte</h2>
-                <p>Preencha o formulário abaixo e nossa equipe entrará em contato o quanto antes.</p>
-                <form id="helpForm" class="help-form">
-                    <div class="form-group">
-                        <label for="empresa">Empresa *</label>
-                        <input type="text" id="empresa" name="empresa" required placeholder="Nome da sua empresa">
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Perguntas Frequentes</h2>
+                <p class="section__subtitle">Tudo o que você precisa saber sobre as geladeiras inteligentes e a experiência RapChef.</p>
+                <div class="faq-grid">
+                    <article class="card faq-card">
+                        <h3>Como funciona o sistema RapChef?</h3>
+                        <p>Instalamos geladeiras inteligentes com refeições prontas em seu condomínio ou empresa, sem custos de instalação. Os usuários podem escolher e pagar diretamente na geladeira 24/7.</p>
+                    </article>
+                    <article class="card faq-card">
+                        <h3>Quais formas de pagamento são aceitas?</h3>
+                        <p>Aceitamos cartão de crédito, débito, Vale Refeição (VR), Vale Alimentação (VA) e PIX.</p>
+                    </article>
+                    <article class="card faq-card">
+                        <h3>As refeições são saudáveis?</h3>
+                        <p>Sim! Todas as nossas refeições são caseiras, sem conservantes e de extrema qualidade.</p>
+                    </article>
+                    <article class="card faq-card">
+                        <h3>Quantas opções de refeições há?</h3>
+                        <p>Oferecemos 35 tipos diferentes de refeições caseiras, garantindo variedade e qualidade.</p>
+                    </article>
+                    <article class="card faq-card">
+                        <h3>Preciso de um aplicativo?</h3>
+                        <p>Não! O sistema é totalmente self-service na própria geladeira. Sem complicações.</p>
+                    </article>
+                    <article class="card faq-card">
+                        <h3>Como solicitar uma geladeira?</h3>
+                        <p>Entre em contato conosco através do WhatsApp ou visite a página "Peça a sua geladeira" para mais informações.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--compact">
+            <div class="container">
+                <div class="card support-cta">
+                    <h2 class="support-cta__title">Ainda tem dúvidas?</h2>
+                    <p>Converse com nossa equipe para resolver qualquer questão rapidamente.</p>
+                    <div class="support-cta__actions">
+                        <a href="https://wa.me/5511947223641" target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+                        <a href="mailto:michael.mm@rapchef.com.br" class="btn btn-ghost">Enviar E-mail</a>
                     </div>
-                    <div class="form-group">
-                        <label for="contato">Contato principal *</label>
-                        <input type="text" id="contato" name="contato" required placeholder="Telefone ou e-mail para retorno">
-                    </div>
-                    <div class="form-group">
-                        <label for="tipo_problema">Tipo de problema *</label>
-                        <select id="tipo_problema" name="tipo_problema" required>
-                            <option value="">Selecione</option>
-                            <option value="compra">Problema em comprar</option>
-                            <option value="luz">Geladeira sem luz</option>
-                            <option value="sabor">Faltando algum sabor</option>
-                            <option value="produto">Não tem o que eu quero</option>
-                            <option value="pagamento">Problema com pagamento</option>
-                            <option value="outro">Outro problema</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="urgencia">Urgência *</label>
-                        <select id="urgencia" name="urgencia" required>
-                            <option value="">Selecione o nível de urgência</option>
-                            <option value="baixa">Baixa - Pode aguardar alguns dias</option>
-                            <option value="media">Média - Precisa de atenção em breve</option>
-                            <option value="alta">Alta - Urgente</option>
-                            <option value="critica">Crítica - Emergência</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="descricao">Descrição do problema *</label>
-                        <textarea id="descricao" name="descricao" rows="5" required placeholder="Descreva detalhadamente o que está acontecendo"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary help-submit-btn">Enviar solicitação</button>
-                </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="card form-card">
+                    <h2>Envie sua solicitação de suporte</h2>
+                    <p>Preencha o formulário abaixo e nossa equipe entrará em contato o quanto antes.</p>
+                    <form id="helpForm" class="form">
+                        <div class="form__grid form__grid--two">
+                            <div class="form__group form__group--full">
+                                <label for="empresa">Empresa *</label>
+                                <input type="text" id="empresa" name="empresa" required placeholder="Nome da sua empresa" class="form__control">
+                            </div>
+                            <div class="form__group form__group--full">
+                                <label for="contato">Contato principal *</label>
+                                <input type="text" id="contato" name="contato" required placeholder="Telefone ou e-mail para retorno" class="form__control">
+                            </div>
+                            <div class="form__group">
+                                <label for="tipo_problema">Tipo de problema *</label>
+                                <select id="tipo_problema" name="tipo_problema" required class="form__control">
+                                    <option value="">Selecione</option>
+                                    <option value="compra">Problema em comprar</option>
+                                    <option value="luz">Geladeira sem luz</option>
+                                    <option value="sabor">Faltando algum sabor</option>
+                                    <option value="produto">Não tem o que eu quero</option>
+                                    <option value="pagamento">Problema com pagamento</option>
+                                    <option value="outro">Outro problema</option>
+                                </select>
+                            </div>
+                            <div class="form__group">
+                                <label for="urgencia">Urgência *</label>
+                                <select id="urgencia" name="urgencia" required class="form__control">
+                                    <option value="">Selecione o nível de urgência</option>
+                                    <option value="baixa">Baixa - Pode aguardar alguns dias</option>
+                                    <option value="media">Média - Precisa de atenção em breve</option>
+                                    <option value="alta">Alta - Urgente</option>
+                                    <option value="critica">Crítica - Emergência</option>
+                                </select>
+                            </div>
+                            <div class="form__group form__group--full">
+                                <label for="descricao">Descrição do problema *</label>
+                                <textarea id="descricao" name="descricao" rows="5" required placeholder="Descreva detalhadamente o que está acontecendo" class="form__control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__actions">
+                            <button type="submit" class="btn btn-primary form__submit">Enviar solicitação</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Rapchef. Todos os direitos reservados.</p>
-            <div class="footer-contacts">
-                <a href="mailto:michael.mm@rapchef.com.br" class="footer-link">
-                    📧 michael.mm@rapchef.com.br
-                </a>
-                <a href="https://wa.me/5511947223641" target="_blank" class="footer-link">
-                    📱 +55 11 94723-641
-                </a>
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <h3>RapChef</h3>
+                <p>Autonomia, sabor e cuidado em cada refeição para empresas e condomínios.</p>
+            </div>
+            <div class="footer__links">
+                <strong>Explore</strong>
+                <a href="index.html">Home</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="peca-sua-geladeira.html">Peça a sua geladeira</a>
+            </div>
+            <div class="footer__links footer__contact">
+                <strong>Contato</strong>
+                <a href="mailto:michael.mm@rapchef.com.br">📧 michael.mm@rapchef.com.br</a>
+                <a href="https://wa.me/5511947223641" target="_blank">📱 +55 11 94722-3641</a>
+            </div>
+            <div class="footer__legal">
+                &copy; 2024 RapChef. Todos os direitos reservados.
             </div>
         </div>
     </footer>
+
     <script>
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navLinks = document.querySelector('nav .nav-links');
+        const navLinks = document.getElementById('navLinks');
 
         if (mobileMenuToggle && navLinks) {
             mobileMenuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+                const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinks.classList.toggle('is-open');
             });
         }
 
