@@ -1,0 +1,177 @@
+[
+    {
+        "id": "m1",
+        "name": "Bacalhau Gratinado",
+        "description": "Bacalhau fresco gratinado com molho especial.",
+        "category": "Peixe",
+        "image": "Bacalhau gratinado_.jpg"
+    },
+    {
+        "id": "m2",
+        "name": "Baião de Dois",
+        "description": "Prato nordestino tradicional com feijão e milho.",
+        "category": "Tradicional",
+        "image": "Baião de Dois_.jpg"
+    },
+    {
+        "id": "m3",
+        "name": "Bobó de Frango",
+        "description": "Frango cozido em molho de mandioca cremoso.",
+        "category": "Frango",
+        "image": "Bobo de Frango.jpg"
+    },
+    {
+        "id": "m4",
+        "name": "Escondidinho de Carne Seca",
+        "description": "Carne seca desfiada com purê de mandioca.",
+        "category": "Carne",
+        "image": "Escondidinho de Carne Seca_.jpg"
+    },
+    {
+        "id": "m5",
+        "name": "Feijoada",
+        "description": "Clássica feijoada brasileira com carnes variadas.",
+        "category": "Carne",
+        "image": "Feijoada_.jpg"
+    },
+    {
+        "id": "m6",
+        "name": "Filé de Frango, Arroz Integral e Brócolis",
+        "description": "Opção saudável e equilibrada com proteína magra.",
+        "category": "Frango",
+        "image": "Filé de frango,arroz integral e brócolis_.jpg"
+    },
+    {
+        "id": "m7",
+        "name": "Frango em Cubos e Batata Doce",
+        "description": "Frango suculento acompanhado de batata doce.",
+        "category": "Frango",
+        "image": "Frango em cubos e Batata Doce_.jpg"
+    },
+    {
+        "id": "m8",
+        "name": "Lagarto Recheado ao Molho",
+        "description": "Lagarto suculento recheado com molho delicioso.",
+        "category": "Carne",
+        "image": "Lagarto recheado ao molho_.jpg"
+    },
+    {
+        "id": "m9",
+        "name": "Lasanha Bolonhesa",
+        "description": "Clássica lasanha com molho à bolonhesa.",
+        "category": "Massas",
+        "image": "Lasanha Bolonhesa_.jpg"
+    },
+    {
+        "id": "m10",
+        "name": "Lasanha de 4 Queijos e Brócolis",
+        "description": "Lasanha cremosa com 4 queijos e brócolis.",
+        "category": "Massas",
+        "image": "Lasanha de 4Queijos e brócolis_.jpg"
+    },
+    {
+        "id": "m11",
+        "name": "Lasanha de Espinafre",
+        "description": "Lasanha vegetariana com espinafre fresco.",
+        "category": "Vegetariano",
+        "image": "Lasanha de Espinafre_.jpg"
+    },
+    {
+        "id": "m12",
+        "name": "Lasanha de Legumes",
+        "description": "Lasanha nutritiva com mix de legumes.",
+        "category": "Vegetariano",
+        "image": "Lasanha de Legumes_.jpg"
+    },
+    {
+        "id": "m13",
+        "name": "Macarrão Integral com Almôndegas",
+        "description": "Macarrão integral com almôndegas caseiras.",
+        "category": "Massas",
+        "image": "Macarrão Integral com Almôndegas_.jpg"
+    },
+    {
+        "id": "m14",
+        "name": "Panqueca de Carne",
+        "description": "Panquecas recheadas com carne moída.",
+        "category": "Carne",
+        "image": "Panqueca de Carne_.jpg"
+    },
+    {
+        "id": "m15",
+        "name": "Panqueca de Frango",
+        "description": "Panquecas recheadas com frango desfiado.",
+        "category": "Frango",
+        "image": "Panqueca de Frango_.jpg"
+    },
+    {
+        "id": "m16",
+        "name": "Parmegiana de Frango",
+        "description": "Frango à milanesa crocante com molho e queijo.",
+        "category": "Frango",
+        "image": "Parmegiana de Frango.jpg"
+    },
+    {
+        "id": "m17",
+        "name": "Patinho Moído e Batata Doce",
+        "description": "Carne moída macia acompanhada de batata doce.",
+        "category": "Carne",
+        "image": "Patinho moído e Batata Doce_.jpg"
+    },
+    {
+        "id": "m18",
+        "name": "Peixe ao Molho de Camarão",
+        "description": "Peixe fresco com molho cremoso de camarão.",
+        "category": "Peixe",
+        "image": "Peixe ao molho de camarão_.jpg"
+    },
+    {
+        "id": "m19",
+        "name": "Peixe Grelhado com Purê de Mandioquinha",
+        "description": "Peixe grelhado com acompanhamento nutritivo.",
+        "category": "Peixe",
+        "image": "Peixe grelhado com Purê de Mandioquinha_.jpg"
+    },
+    {
+        "id": "m20",
+        "name": "Pernil Refogado",
+        "description": "Pernil suculento refogado com especiarias.",
+        "category": "Carne",
+        "image": "Pernil Refogado_.jpg"
+    },
+    {
+        "id": "m21",
+        "name": "Picadinho de Carne",
+        "description": "Carne picada macia com molho caseiro.",
+        "category": "Carne",
+        "image": "Picadinho de Carne_.jpg"
+    },
+    {
+        "id": "m22",
+        "name": "Risoto de Calabresa",
+        "description": "Risoto cremoso com calabresa fatiada.",
+        "category": "Arroz",
+        "image": "Risoto de Calabresa_.jpg"
+    },
+    {
+        "id": "m23",
+        "name": "Risoto de Camarão",
+        "description": "Risoto refinado com camarão fresco.",
+        "category": "Peixe",
+        "image": "Risoto de Camarão_.jpg"
+    },
+    {
+        "id": "m24",
+        "name": "Risoto de Frango",
+        "description": "Risoto cremoso com frango desfiado.",
+        "category": "Frango",
+        "image": "Risoto de Frango_.jpg"
+    },
+    {
+        "id": "m25",
+        "name": "Virado à Paulista",
+        "description": "Prato típico paulista com carnes variadas.",
+        "category": "Tradicional",
+        "image": "Virado à Paulista_.jpg"
+    }
+]

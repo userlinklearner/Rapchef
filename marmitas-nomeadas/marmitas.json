@@ -1,0 +1,50 @@
+[
+    {
+        "id": "m1",
+        "name": "Marmita Tradicional - Frango com Legumes",
+        "description": "Peito de frango grelhado, arroz integral, legumes salteados.",
+        "price": 18.90,
+        "category": "Tradicional",
+        "image": "marmitas-nomeadas/frango-legumes.jpg"
+    },
+    {
+        "id": "m2",
+        "name": "Marmita Vegetariana - Quinoa e Vegetais",
+        "description": "Quinoa, mix de vegetais assados e molho de ervas.",
+        "price": 21.50,
+        "category": "Vegetariano",
+        "image": "marmitas-nomeadas/quinoa-vegetais.jpg"
+    },
+    {
+        "id": "m3",
+        "name": "Marmita Fitness - Frango e Batata Doce",
+        "description": "Peito de frango, batata doce assada e salada leve.",
+        "price": 20.00,
+        "category": "Fitness",
+        "image": "marmitas-nomeadas/frango-batatadoce.jpg"
+    },
+    {
+        "id": "m4",
+        "name": "Marmita Caseira - Carne com Purê",
+        "description": "Carne cozida lenta, purê de batata e brócolis no vapor.",
+        "price": 22.75,
+        "category": "Caseira",
+        "image": "marmitas-nomeadas/carne-pure.jpg"
+    },
+    {
+        "id": "m5",
+        "name": "Marmita Low Carb - Salmão e Legumes",
+        "description": "Salmão grelhado, mix de folhas e legumes salteados.",
+        "price": 29.90,
+        "category": "Low Carb",
+        "image": "marmitas-nomeadas/salmao-legumes.jpg"
+    },
+    {
+        "id": "m6",
+        "name": "Marmita Econômica - Frango com Arroz",
+        "description": "Opção econômica com porção equilibrada.",
+        "price": 14.00,
+        "category": "Econômica",
+        "image": "marmitas-nomeadas/frango-arroz.jpg"
+    }
+]

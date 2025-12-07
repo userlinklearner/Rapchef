@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapchef - Cardápio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,12 +37,40 @@
             </div>
         </section>
 
-        <section class="section section--compact">
-            <div class="container menu-display">
-                <div class="menu-display__inner">
-                    <div class="menu-display__frame">
-                        <img src="cardapio.jpg" alt="Cardápio RapChef" class="menu-display__image">
+        <!-- Marketplace section -->
+        <section class="marketplace section">
+            <div class="container">
+                <div class="marketplace__controls">
+                    <div class="filters" role="search">
+                        <label class="filter">
+                            <span class="visually-hidden">Pesquisar</span>
+                            <input id="searchInput" type="search" placeholder="Buscar marmita, ingrediente ou sabor">
+                        </label>
+
+                        <label class="filter">
+                            <select id="categorySelect" aria-label="Filtrar por categoria">
+                                <option value="">Todas as categorias</option>
+                            </select>
+                        </label>
                     </div>
+
+                    <div class="marketplace__sort">
+                        <div class="filter">
+                            <select id="sortSelect" aria-label="Ordenar por">
+                                <option value="popular">Mais populares</option>
+                                <option value="name-asc">A → Z</option>
+                                <option value="name-desc">Z → A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="productGrid" class="product-grid" aria-live="polite">
+                    <!-- cards rendered here -->
+                </div>
+
+                <div id="emptyState" class="marketplace__empty" hidden>
+                    Nenhuma marmita encontrada. Tente ajustar os filtros.
                 </div>
             </div>
         </section>
@@ -58,6 +89,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/marmitas.js"></script>
     <script>
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
@@ -66,6 +98,12 @@
             mobileMenuToggle.addEventListener('click', () => {
                 const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
                 mobileMenuToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinks.classList.toggle('is-open');
+            });
+        }
+    </script>
+</body>
+</html>
                 navLinks.classList.toggle('is-open');
             });
         }
