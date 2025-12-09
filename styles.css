@@ -832,9 +832,10 @@ textarea.form__control {
 
 .product-card__meta {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 6px;
     margin-top: 6px;
 }
 
@@ -842,11 +843,12 @@ textarea.form__control {
 .product-category {
     background: var(--color-primary-soft);
     color: var(--color-primary);
-    padding: 6px 10px;
+    padding: 4px 8px;
     border-radius: 999px;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     line-height: 1;
+    white-space: nowrap;
 }
 
 /* empty state */

@@ -79,23 +79,20 @@
             img.alt = item.name || 'Marmita RapChef';
             img.style.cursor = 'pointer';
 
-            // Build candidate image paths — prioritize "marmitas nomeadas" folder
+            // Build candidate image paths
             const tryPaths = [];
 
             if (item.image) {
                 const basename = item.image.split('/').pop();
-                // Try "marmitas nomeadas" folder FIRST
                 tryPaths.push(`marmitas nomeadas/${basename}`);
                 tryPaths.push(`marmitas-nomeadas/${basename}`);
                 tryPaths.push(`marmitas/${basename}`);
-                // Then try the image as-is (in case it has a full path)
                 tryPaths.push(item.image);
             }
 
             let attemptIndex = 0;
             function setNextSrc() {
                 if (attemptIndex >= tryPaths.length) {
-                    // final fallback: SVG placeholder
                     img.src = SVG_PLACEHOLDER;
                     return;
                 }
@@ -128,12 +125,16 @@
             const meta = document.createElement('div');
             meta.className = 'product-card__meta';
 
-            const cat = document.createElement('div');
-            cat.className = 'product-category';
-            cat.textContent = item.category || '';
-            cat.setAttribute('aria-hidden', 'true');
+            // Handle multiple categories
+            const cats = Array.isArray(item.categories) ? item.categories : (item.category ? [item.category] : []);
+            cats.forEach(cat => {
+                const catBadge = document.createElement('div');
+                catBadge.className = 'product-category';
+                catBadge.textContent = cat;
+                catBadge.setAttribute('aria-hidden', 'true');
+                meta.appendChild(catBadge);
+            });
 
-            meta.appendChild(cat);
             body.appendChild(title);
             body.appendChild(desc);
             body.appendChild(meta);
@@ -145,9 +146,13 @@
     }
 
     function populateCategories(list) {
-        const cats = Array.from(new Set(list.map(i => (i.category || '').trim()).filter(Boolean)));
-        cats.sort((a,b) => a.localeCompare(b, 'pt-BR'));
-        cats.forEach(c => {
+        const cats = [];
+        list.forEach(item => {
+            const itemCats = Array.isArray(item.categories) ? item.categories : (item.category ? [item.category] : []);
+            cats.push(...itemCats);
+        });
+        const uniqueCats = [...new Set(cats)].filter(Boolean).sort((a,b) => a.localeCompare(b, 'pt-BR'));
+        uniqueCats.forEach(c => {
             const opt = document.createElement('option');
             opt.value = c;
             opt.textContent = c;
@@ -157,12 +162,26 @@
 
     function applyFilters() {
         const q = (searchInput.value || '').toLowerCase().trim();
-        const cat = categorySelect.value;
+        const selectedCat = categorySelect.value;
         let filtered = items.slice();
 
-        if (cat) filtered = filtered.filter(i => (i.category || '') === cat);
-        if (q) filtered = filtered.filter(i => ((i.name || '') + ' ' + (i.description || '')).toLowerCase().includes(q));
+        // Filter by category — product matches if ANY of its categories match
+        if (selectedCat) {
+            filtered = filtered.filter(i => {
+                const itemCats = Array.isArray(i.categories) ? i.categories : (i.category ? [i.category] : []);
+                return itemCats.includes(selectedCat);
+            });
+        }
 
+        // Filter by search
+        if (q) {
+            filtered = filtered.filter(i => {
+                const itemCats = Array.isArray(i.categories) ? i.categories.join(' ') : (i.category || '');
+                return ((i.name || '') + ' ' + (i.description || '') + ' ' + itemCats).toLowerCase().includes(q);
+            });
+        }
+
+        // Sort
         const sort = sortSelect.value;
         if (sort === 'name-asc') filtered.sort((a, b) => (a.name || '').localeCompare(b.name || '', 'pt-BR'));
         else if (sort === 'name-desc') filtered.sort((a, b) => (b.name || '').localeCompare(a.name || '', 'pt-BR'));
