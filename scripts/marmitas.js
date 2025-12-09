@@ -18,6 +18,50 @@
 
     const SVG_PLACEHOLDER = 'data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22640%22 height=%22360%22 viewBox=%220 0 640 360%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23FFF8F0%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%2324543B%22 font-family=%22DM Sans, Arial, sans-serif%22 font-size=%2220%22%3EImagem indisponível%3C/text%3E%3C/svg%3E';
 
+    // Create modal overlay
+    function createModal() {
+        const modal = document.createElement('div');
+        modal.id = 'imageModal';
+        modal.className = 'image-modal';
+        modal.innerHTML = `
+            <div class="image-modal__overlay"></div>
+            <div class="image-modal__container">
+                <button class="image-modal__close" aria-label="Fechar imagem">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <img class="image-modal__image" src="" alt="">
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        const overlay = modal.querySelector('.image-modal__overlay');
+        const closeBtn = modal.querySelector('.image-modal__close');
+
+        function closeModal() {
+            modal.classList.remove('is-open');
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        return modal;
+    }
+
+    const modal = createModal();
+
+    function openModal(imageSrc, alt) {
+        const modalImg = modal.querySelector('.image-modal__image');
+        modalImg.src = imageSrc;
+        modalImg.alt = alt;
+        modal.classList.add('is-open');
+    }
+
     function renderItems(list) {
         grid.innerHTML = '';
         if (!list.length) {
@@ -33,6 +77,7 @@
             const img = document.createElement('img');
             img.className = 'product-card__image';
             img.alt = item.name || 'Marmita RapChef';
+            img.style.cursor = 'pointer';
 
             // Build candidate image paths — prioritize "marmitas nomeadas" folder
             const tryPaths = [];
@@ -61,6 +106,11 @@
             img.onerror = () => {
                 setNextSrc();
             };
+
+            // Click to zoom
+            img.addEventListener('click', () => {
+                openModal(img.src, img.alt);
+            });
 
             setNextSrc();
 

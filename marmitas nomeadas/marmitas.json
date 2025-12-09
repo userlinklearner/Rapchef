@@ -1,177 +1,233 @@
 [
     {
         "id": "m1",
-        "name": "Bacalhau Gratinado",
-        "description": "Bacalhau fresco gratinado com molho especial.",
+        "name": "Bacalhau gratinado",
+        "description": "Deliciosa refeição caseira: Bacalhau gratinado. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Peixe",
         "image": "Bacalhau gratinado_.jpg"
     },
     {
         "id": "m2",
         "name": "Baião de Dois",
-        "description": "Prato nordestino tradicional com feijão e milho.",
+        "description": "Deliciosa refeição caseira: Baião de Dois. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Tradicional",
         "image": "Baião de Dois_.jpg"
     },
     {
         "id": "m3",
-        "name": "Bobó de Frango",
-        "description": "Frango cozido em molho de mandioca cremoso.",
+        "name": "Bobo de Frango",
+        "description": "Deliciosa refeição caseira: Bobo de Frango. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Frango",
         "image": "Bobo de Frango.jpg"
     },
     {
         "id": "m4",
         "name": "Escondidinho de Carne Seca",
-        "description": "Carne seca desfiada com purê de mandioca.",
+        "description": "Deliciosa refeição caseira: Escondidinho de Carne Seca. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Escondidinho de Carne Seca_.jpg"
     },
     {
         "id": "m5",
         "name": "Feijoada",
-        "description": "Clássica feijoada brasileira com carnes variadas.",
+        "description": "Deliciosa refeição caseira: Feijoada. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Feijoada_.jpg"
     },
     {
         "id": "m6",
-        "name": "Filé de Frango, Arroz Integral e Brócolis",
-        "description": "Opção saudável e equilibrada com proteína magra.",
+        "name": "Filé de frango,arroz integral e brócolis",
+        "description": "Deliciosa refeição caseira: Filé de frango,arroz integral e brócolis. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Frango",
         "image": "Filé de frango,arroz integral e brócolis_.jpg"
     },
     {
         "id": "m7",
-        "name": "Frango em Cubos e Batata Doce",
-        "description": "Frango suculento acompanhado de batata doce.",
+        "name": "Frango em cubos e Batata Doce",
+        "description": "Deliciosa refeição caseira: Frango em cubos e Batata Doce. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Frango",
         "image": "Frango em cubos e Batata Doce_.jpg"
     },
     {
         "id": "m8",
-        "name": "Lagarto Recheado ao Molho",
-        "description": "Lagarto suculento recheado com molho delicioso.",
+        "name": "Lagarto recheado ao molho",
+        "description": "Deliciosa refeição caseira: Lagarto recheado ao molho. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Lagarto recheado ao molho_.jpg"
     },
     {
         "id": "m9",
         "name": "Lasanha Bolonhesa",
-        "description": "Clássica lasanha com molho à bolonhesa.",
+        "description": "Deliciosa refeição caseira: Lasanha Bolonhesa. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Massas",
         "image": "Lasanha Bolonhesa_.jpg"
     },
     {
         "id": "m10",
-        "name": "Lasanha de 4 Queijos e Brócolis",
-        "description": "Lasanha cremosa com 4 queijos e brócolis.",
+        "name": "Lasanha de 4Queijos e brócolis",
+        "description": "Deliciosa refeição caseira: Lasanha de 4Queijos e brócolis. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Massas",
         "image": "Lasanha de 4Queijos e brócolis_.jpg"
     },
     {
         "id": "m11",
         "name": "Lasanha de Espinafre",
-        "description": "Lasanha vegetariana com espinafre fresco.",
-        "category": "Vegetariano",
+        "description": "Deliciosa refeição caseira: Lasanha de Espinafre. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Massas",
         "image": "Lasanha de Espinafre_.jpg"
     },
     {
         "id": "m12",
         "name": "Lasanha de Legumes",
-        "description": "Lasanha nutritiva com mix de legumes.",
-        "category": "Vegetariano",
+        "description": "Deliciosa refeição caseira: Lasanha de Legumes. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Massas",
         "image": "Lasanha de Legumes_.jpg"
     },
     {
         "id": "m13",
         "name": "Macarrão Integral com Almôndegas",
-        "description": "Macarrão integral com almôndegas caseiras.",
+        "description": "Deliciosa refeição caseira: Macarrão Integral com Almôndegas. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Massas",
         "image": "Macarrão Integral com Almôndegas_.jpg"
     },
     {
         "id": "m14",
         "name": "Panqueca de Carne",
-        "description": "Panquecas recheadas com carne moída.",
+        "description": "Deliciosa refeição caseira: Panqueca de Carne. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Panqueca de Carne_.jpg"
     },
     {
         "id": "m15",
         "name": "Panqueca de Frango",
-        "description": "Panquecas recheadas com frango desfiado.",
+        "description": "Deliciosa refeição caseira: Panqueca de Frango. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Frango",
         "image": "Panqueca de Frango_.jpg"
     },
     {
         "id": "m16",
         "name": "Parmegiana de Frango",
-        "description": "Frango à milanesa crocante com molho e queijo.",
+        "description": "Deliciosa refeição caseira: Parmegiana de Frango. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Frango",
         "image": "Parmegiana de Frango.jpg"
     },
     {
         "id": "m17",
-        "name": "Patinho Moído e Batata Doce",
-        "description": "Carne moída macia acompanhada de batata doce.",
+        "name": "Patinho moído e Batata Doce",
+        "description": "Deliciosa refeição caseira: Patinho moído e Batata Doce. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Patinho moído e Batata Doce_.jpg"
     },
     {
         "id": "m18",
-        "name": "Peixe ao Molho de Camarão",
-        "description": "Peixe fresco com molho cremoso de camarão.",
+        "name": "Peixe ao molho de camarão",
+        "description": "Deliciosa refeição caseira: Peixe ao molho de camarão. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Peixe",
         "image": "Peixe ao molho de camarão_.jpg"
     },
     {
         "id": "m19",
-        "name": "Peixe Grelhado com Purê de Mandioquinha",
-        "description": "Peixe grelhado com acompanhamento nutritivo.",
+        "name": "Peixe grelhado com Purê de Mandioquinha",
+        "description": "Deliciosa refeição caseira: Peixe grelhado com Purê de Mandioquinha. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Peixe",
         "image": "Peixe grelhado com Purê de Mandioquinha_.jpg"
     },
     {
         "id": "m20",
         "name": "Pernil Refogado",
-        "description": "Pernil suculento refogado com especiarias.",
+        "description": "Deliciosa refeição caseira: Pernil Refogado. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Pernil Refogado_.jpg"
     },
     {
         "id": "m21",
         "name": "Picadinho de Carne",
-        "description": "Carne picada macia com molho caseiro.",
+        "description": "Deliciosa refeição caseira: Picadinho de Carne. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Carne",
         "image": "Picadinho de Carne_.jpg"
     },
     {
         "id": "m22",
         "name": "Risoto de Calabresa",
-        "description": "Risoto cremoso com calabresa fatiada.",
+        "description": "Deliciosa refeição caseira: Risoto de Calabresa. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Arroz",
         "image": "Risoto de Calabresa_.jpg"
     },
     {
         "id": "m23",
         "name": "Risoto de Camarão",
-        "description": "Risoto refinado com camarão fresco.",
+        "description": "Deliciosa refeição caseira: Risoto de Camarão. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Peixe",
         "image": "Risoto de Camarão_.jpg"
     },
     {
         "id": "m24",
         "name": "Risoto de Frango",
-        "description": "Risoto cremoso com frango desfiado.",
+        "description": "Deliciosa refeição caseira: Risoto de Frango. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Frango",
         "image": "Risoto de Frango_.jpg"
     },
     {
         "id": "m25",
         "name": "Virado à Paulista",
-        "description": "Prato típico paulista com carnes variadas.",
+        "description": "Deliciosa refeição caseira: Virado à Paulista. Feita com ingredientes frescos e de alta qualidade.",
         "category": "Tradicional",
         "image": "Virado à Paulista_.jpg"
+    },
+    {
+        "id": "m26",
+        "name": "bife a role",
+        "description": "Deliciosa refeição caseira: bife a role. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Tradicional",
+        "image": "bife a role.png"
+    },
+    {
+        "id": "m27",
+        "name": "carne seca",
+        "description": "Deliciosa refeição caseira: carne seca. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Carne",
+        "image": "carne seca.png"
+    },
+    {
+        "id": "m28",
+        "name": "escond frango",
+        "description": "Deliciosa refeição caseira: escond frango. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Frango",
+        "image": "escond frango.png"
+    },
+    {
+        "id": "m29",
+        "name": "estrog carne",
+        "description": "Deliciosa refeição caseira: estrog carne. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Carne",
+        "image": "estrog carne.png"
+    },
+    {
+        "id": "m30",
+        "name": "estrog frango",
+        "description": "Deliciosa refeição caseira: estrog frango. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Frango",
+        "image": "estrog frango.png"
+    },
+    {
+        "id": "m31",
+        "name": "lasanha berinjela",
+        "description": "Deliciosa refeição caseira: lasanha berinjela. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Massas",
+        "image": "lasanha berinjela.png"
+    },
+    {
+        "id": "m32",
+        "name": "panqueca palmito",
+        "description": "Deliciosa refeição caseira: panqueca palmito. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Massas",
+        "image": "panqueca palmito.png"
+    },
+    {
+        "id": "m33",
+        "name": "parme carne",
+        "description": "Deliciosa refeição caseira: parme carne. Feita com ingredientes frescos e de alta qualidade.",
+        "category": "Carne",
+        "image": "parme carne.png"
     }
 ]
