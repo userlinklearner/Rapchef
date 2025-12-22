@@ -11,6 +11,7 @@
     const emptySection = document.getElementById('emptySection');
     const emptyMessage = document.getElementById('emptyMessage');
     const refreshBtn = document.getElementById('refreshBtn');
+    const orderWhatsAppBtn = document.getElementById('orderWhatsAppBtn');
 
     let items = [];
     let deposits = [];
@@ -279,6 +280,25 @@
         if (refreshBtn) {
             refreshBtn.addEventListener('click', () => {
                 loadStock();
+            });
+        }
+        if (orderWhatsAppBtn) {
+            orderWhatsAppBtn.addEventListener('click', () => {
+                const suggestion = (items && items.length) ? items[0].name : '';
+                const dish = prompt('Qual prato você quer pedir?', suggestion || '');
+                if (dish === null) return;
+                const selectedClient =
+                    (freezerSelect && freezerSelect.options[freezerSelect.selectedIndex]?.textContent?.trim()) || '';
+                const clientAnswer = prompt('Para qual cliente/unidade?', selectedClient || '');
+                if (clientAnswer === null) return;
+
+                const dishText = dish.trim();
+                const clientText = clientAnswer.trim() || 'Não informado';
+                const text = dishText
+                    ? `Olá! Quero pedir o prato "${dishText}". Cliente/Unidade: ${clientText}.`
+                    : `Olá! Quero pedir um prato do estoque. Cliente/Unidade: ${clientText}.`;
+                const url = `https://wa.me/5511947223641?text=${encodeURIComponent(text)}`;
+                window.open(url, '_blank', 'noopener,noreferrer');
             });
         }
 
