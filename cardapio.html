@@ -21,6 +21,7 @@
             <ul class="nav__links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cardapio.html" class="is-active">Cardápio</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
                 <li><a href="ajuda.html">Ajuda</a></li>
                 <li><a href="peca-sua-geladeira.html">Peça a sua geladeira</a></li>
             </ul>
@@ -46,7 +47,6 @@
                             <span class="visually-hidden">Pesquisar</span>
                             <input id="searchInput" type="search" placeholder="Buscar marmita, ingrediente ou sabor">
                         </label>
-
                         <label class="filter">
                             <select id="categorySelect" aria-label="Filtrar por categoria">
                                 <option value="">Todas as categorias</option>
@@ -77,18 +77,30 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Rapchef. Todos os direitos reservados.</p>
-            <div class="footer-contacts">
-                <a href="mailto:michael.mm@rapchef.com.br" class="footer-link">
-                    📧 michael.mm@rapchef.com.br
-                </a>
-                <a href="https://wa.me/5511947223641" target="_blank" class="footer-link">
-                    📱 +55 11 94722-3641
-                </a>
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <h3>RapChef</h3>
+                <p>Autonomia, sabor e cuidado em cada refeição para empresas e condomínios.</p>
+            </div>
+            <div class="footer__links">
+                <strong>Explore</strong>
+                <a href="index.html">Home</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="estoque.html">Estoque</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="peca-sua-geladeira.html">Peça a sua geladeira</a>
+            </div>
+            <div class="footer__links footer__contact">
+                <strong>Contato</strong>
+                <a href="mailto:michael.mm@rapchef.com.br">📧 michael.mm@rapchef.com.br</a>
+                <a href="https://wa.me/5511947223641" target="_blank">📱 +55 11 94722-3641</a>
+            </div>
+            <div class="footer__legal">
+                &copy; 2024 RapChef. Todos os direitos reservados.
             </div>
         </div>
     </footer>
+
     <script src="scripts/marmitas.js"></script>
     <script>
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -98,12 +110,6 @@
             mobileMenuToggle.addEventListener('click', () => {
                 const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
                 mobileMenuToggle.setAttribute('aria-expanded', String(!expanded));
-                navLinks.classList.toggle('is-open');
-            });
-        }
-    </script>
-</body>
-</html>
                 navLinks.classList.toggle('is-open');
             });
         }

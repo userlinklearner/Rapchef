@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapChef - Estoque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="container nav__inner">
+            <a href="index.html" class="nav__logo">RapChef</a>
+            <button class="nav__toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="estoque.html" class="is-active">Estoque</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li>
+                <li><a href="peca-sua-geladeira.html">Peça a sua geladeira</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="estoque-header section">
+            <div class="container">
+                <h1 class="estoque-header__title">Estoque</h1>
+                <p class="estoque-header__subtitle">Veja os produtos disponíveis atualmente no seu freezer</p>
+                <p class="estoque-header__helper">Os dados são atualizados automaticamente conforme o uso do equipamento.</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="section">
+            <div class="container">
+                <div class="estoque-filters card">
+                    <div class="estoque-filters__grid">
+                        <!-- Freezer Selector -->
+                        <div class="form-group">
+                            <label for="freezerSelect" class="form-group__label">
+                                Freezer / Unidade <span class="required">*</span>
+                            </label>
+                            <select id="freezerSelect" class="form-group__input" required>
+                                <option value="">Selecione um freezer</option>
+                                <option value="paulista">RapChef – Unidade Paulista</option>
+                                <option value="barueri">RapChef – CD Barueri</option>
+                                <option value="centro">RapChef – Escritório Centro</option>
+                            </select>
+                        </div>
+
+                        <!-- Meal Type Filter -->
+                        <div class="form-group">
+                            <label for="mealTypeSelect" class="form-group__label">Tipo de Refeição</label>
+                            <select id="mealTypeSelect" class="form-group__input" disabled>
+                                <option value="todas">Todas</option>
+                                <option value="prato-principal">Prato Principal</option>
+                                <option value="massa">Massa</option>
+                                <option value="vegetariano">Vegetariano</option>
+                                <option value="fitness">Fitness</option>
+                                <option value="sobremesa">Sobremesa</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Bar -->
+        <section class="section" id="statusSection" style="display: none;">
+            <div class="container">
+                <div class="estoque-status">
+                    <span id="lastUpdateText"></span>
+                    <button id="refreshBtn" class="estoque-status__refresh" title="Atualizar dados">
+                        🔄 Atualizar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error State -->
+        <section class="section" id="errorSection" style="display: none;">
+            <div class="container">
+                <div class="estoque-error">
+                    <span class="estoque-error__icon">⚠️</span>
+                    <div id="errorMessage"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <section class="section" id="loadingSection" style="display: none;">
+            <div class="container">
+                <div class="estoque-loading">
+                    <div class="spinner"></div>
+                    <p>Carregando dados do freezer...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table -->
+        <section class="section" id="tableSection" style="display: none;">
+            <div class="container">
+                <div class="estoque-table card">
+                    <div class="table-responsive">
+                        <table id="inventoryTable">
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Categoria</th>
+                                    <th>Quantidade</th>
+                                    <th>Status</th>
+                                    <th>Última Atualização</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empty State -->
+        <section class="section" id="emptySection" style="display: none;">
+            <div class="container">
+                <div class="estoque-empty">
+                    <span class="estoque-empty__icon">📦</span>
+                    <p id="emptyMessage">Nenhuma informação disponível no momento para este freezer.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <h3>RapChef</h3>
+                <p>Autonomia, sabor e cuidado em cada refeição para empresas e condomínios.</p>
+            </div>
+            <div class="footer__links">
+                <strong>Explore</strong>
+                <a href="index.html">Home</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="estoque.html">Estoque</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="peca-sua-geladeira.html">Peça a sua geladeira</a>
+            </div>
+            <div class="footer__links footer__contact">
+                <strong>Contato</strong>
+                <a href="mailto:michael.mm@rapchef.com.br">📧 michael.mm@rapchef.com.br</a>
+                <a href="https://wa.me/5511947223641" target="_blank">📱 +55 11 94722-3641</a>
+            </div>
+            <div class="footer__legal">
+                &copy; 2024 RapChef. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="estoque.js"></script>
+    <script>
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuToggle && navLinks) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const expanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinks.classList.toggle('is-open');
+            });
+        }
+    </script>
+</body>
+</html>
