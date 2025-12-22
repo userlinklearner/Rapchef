@@ -50,23 +50,13 @@
                             </label>
                             <select id="freezerSelect" class="form-group__input" required>
                                 <option value="">Selecione um freezer</option>
-                                <option value="paulista">RapChef – Unidade Paulista</option>
-                                <option value="barueri">RapChef – CD Barueri</option>
-                                <option value="centro">RapChef – Escritório Centro</option>
                             </select>
                         </div>
 
-                        <!-- Meal Type Filter -->
+                        <!-- Name Filter -->
                         <div class="form-group">
-                            <label for="mealTypeSelect" class="form-group__label">Tipo de Refeição</label>
-                            <select id="mealTypeSelect" class="form-group__input" disabled>
-                                <option value="todas">Todas</option>
-                                <option value="prato-principal">Prato Principal</option>
-                                <option value="massa">Massa</option>
-                                <option value="vegetariano">Vegetariano</option>
-                                <option value="fitness">Fitness</option>
-                                <option value="sobremesa">Sobremesa</option>
-                            </select>
+                            <label for="searchNameInput" class="form-group__label">Filtrar por nome</label>
+                            <input id="searchNameInput" type="search" class="form-group__input" placeholder="Digite o nome da refeição" autocomplete="off">
                         </div>
                     </div>
                 </div>
@@ -114,7 +104,6 @@
                             <thead>
                                 <tr>
                                     <th>Produto</th>
-                                    <th>Categoria</th>
                                     <th>Quantidade</th>
                                     <th>Status</th>
                                     <th>Última Atualização</th>

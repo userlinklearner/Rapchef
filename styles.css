@@ -1058,3 +1058,70 @@ textarea.form__control {
         right: 12px;
     }
 }
+
+/* Estoque Table */
+.estoque-table {
+    border: 1px solid rgba(226, 223, 216, 0.9);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+}
+
+.estoque-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.estoque-table thead {
+    background: linear-gradient(135deg, rgba(229, 239, 233, 0.8), rgba(248, 245, 240, 0.95));
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+}
+
+.estoque-table th,
+.estoque-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(226, 223, 216, 0.8);
+    text-align: left;
+}
+
+.estoque-table tbody tr:hover {
+    background: rgba(36, 84, 59, 0.04);
+}
+
+.estoque-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.estoque-table .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.estoque-table .status--ok {
+    background: rgba(123, 191, 114, 0.12);
+    color: #2c6c2a;
+}
+
+.estoque-table .status--warn {
+    background: rgba(242, 165, 71, 0.14);
+    color: #9c5a10;
+}
+
+.estoque-table .status--out {
+    background: rgba(218, 83, 64, 0.12);
+    color: #9c2f1f;
+}
+
+@media (max-width: 720px) {
+    .estoque-table th,
+    .estoque-table td {
+        padding: 12px 10px;
+    }
+}
