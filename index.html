@@ -34,7 +34,7 @@
                 <div class="hero__content">
                     <span class="hero__eyebrow">Geladeiras Inteligentes</span>
                     <h1 class="hero__title">Alimentação 24/7 em Comodato</h1>
-                    <p class="hero__subtitle">Geladeiras inteligentes com self-service completo, instaladas sem custos. Refeições caseiras prontas a qualquer hora, com pagamento integrado e variedade garantida.</p>
+                    <p class="hero__subtitle">Refeições caseiras prontas na sua geladeira inteligente, 24 horas por dia, sem esforço.</p>
                     <div class="hero__actions">
                         <a href="https://wa.me/5511947223641" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Entre em Contato</a>
                         <a href="peca-sua-geladeira.html" class="btn btn-ghost">Peça sua Geladeira</a>
@@ -43,9 +43,23 @@
                 <div class="hero__media">
                     <div class="hero__media-card">
                         <h3>Cuidado caseiro em cada prato</h3>
-                        <p>Refeições sem conservantes, produzidas com ingredientes frescos e reposição diária para garantir sabor, variedade e bem-estar.</p>
+                        <p>Ingredientes frescos, sem conservantes. Reposição diária e variedade para cada gosto.</p>
                         <span class="hero__badge">35 tipos de refeições • 24h</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--compact">
+            <div class="container food-strip">
+                <div class="food-strip__header">
+                    <span class="hero__eyebrow">Passe para provar</span>
+                    <h2 class="section__title section__title--left">Sabores em destaque</h2>
+                </div>
+                <div class="food-strip__rail" id="foodStripRail" aria-label="Pratos RapChef"></div>
+                <div class="food-strip__nav">
+                    <button class="food-strip__btn" id="foodStripPrev" aria-label="Ver anterior">‹</button>
+                    <button class="food-strip__btn" id="foodStripNext" aria-label="Ver próximo">›</button>
                 </div>
             </div>
         </section>
@@ -53,7 +67,7 @@
         <section class="section">
             <div class="container">
                 <h2 class="section__title">Por que escolher a RapChef?</h2>
-                <p class="section__subtitle">Tecnologia, praticidade e refeições artesanais que elevam a experiência dos seus colaboradores e moradores.</p>
+                <p class="section__subtitle">Tecnologia, praticidade e refeições artesanais na hora.</p>
                 <div class="features-grid">
                     <article class="card feature-card">
                         <h3>Disponibilidade Total</h3>
@@ -168,6 +182,9 @@
     <script>
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
+        const foodStripRail = document.getElementById('foodStripRail');
+        const foodStripPrev = document.getElementById('foodStripPrev');
+        const foodStripNext = document.getElementById('foodStripNext');
 
         if (mobileMenuToggle && navLinks) {
             mobileMenuToggle.addEventListener('click', () => {
@@ -176,6 +193,99 @@
                 navLinks.classList.toggle('is-open');
             });
         }
+
+        (function setupFoodStrip() {
+            if (!foodStripRail) return;
+
+            const candidateDataUrls = [
+                'marmitas nomeadas/marmitas.json',
+                'marmitas-nomeadas/marmitas.json',
+                'marmitas_nomeadas/marmitas.json',
+                'marmitas/marmitas.json',
+                './marmitas nomeadas/marmitas.json',
+                './marmitas-nomeadas/marmitas.json'
+            ];
+
+            async function fetchFirstAvailable(urls) {
+                for (const raw of urls) {
+                    try {
+                        const res = await fetch(encodeURI(raw));
+                        if (!res.ok) continue;
+                        const json = await res.json();
+                        if (Array.isArray(json) && json.length) return json;
+                    } catch (_) {}
+                }
+                return [];
+            }
+
+            function buildImage(src, alt, fallbacks) {
+                const figure = document.createElement('figure');
+                figure.className = 'food-strip__item';
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = alt || 'Prato RapChef';
+                img.loading = 'lazy';
+                let attempt = 0;
+                img.onerror = () => {
+                    attempt += 1;
+                    if (fallbacks && attempt < fallbacks.length) {
+                        img.src = fallbacks[attempt];
+                    }
+                };
+                figure.appendChild(img);
+                return figure;
+            }
+
+            function populate(list) {
+                foodStripRail.innerHTML = '';
+                list.forEach(item => {
+                    const name = item.name || item.nome || 'Prato RapChef';
+                    const file = item.image || item.imagem || '';
+                    const basename = (file || '').split('/').pop() || '';
+                    const slug = basename
+                        .toLowerCase()
+                        .replace(/\s+/g, '-')
+                        .replace(/[,]+/g, '-')
+                        .replace(/_{2,}/g, '_');
+
+                    const tryPaths = [
+                        `marmitas nomeadas/${basename}`,
+                        `marmitas nomeadas/${slug}`,
+                        `marmitas-nomeadas/${basename}`,
+                        `marmitas-nomeadas/${slug}`,
+                        `marmitas/${basename}`,
+                        `marmitas/${slug}`,
+                        basename,
+                        slug,
+                        file
+                    ].filter(Boolean);
+
+                    const encoded = tryPaths.map(p => encodeURI(p));
+                    const unique = encoded.filter((v, i) => encoded.indexOf(v) === i);
+                    if (unique.length) {
+                        const imgEl = buildImage(unique[0], name, unique);
+                        foodStripRail.appendChild(imgEl);
+                    }
+                });
+            }
+
+            fetchFirstAvailable(candidateDataUrls).then(json => {
+                if (!json.length) return;
+                populate(json.slice(0, 20));
+            });
+
+            function scrollByDir(dir) {
+                const distance = foodStripRail.offsetWidth * 0.6;
+                foodStripRail.scrollBy({ left: dir * distance, behavior: 'smooth' });
+            }
+
+            if (foodStripPrev) {
+                foodStripPrev.addEventListener('click', () => scrollByDir(-1));
+            }
+            if (foodStripNext) {
+                foodStripNext.addEventListener('click', () => scrollByDir(1));
+            }
+        })();
     </script>
 </body>
 </html>

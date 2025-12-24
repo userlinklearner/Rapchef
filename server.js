@@ -183,7 +183,14 @@ async function handleApi(req, res, url) {
 }
 
 function serveStaticFile(requestPath, res) {
-    const safePath = path.normalize(requestPath).replace(/^(\.\.[/\\])+/, '');
+    let decodedPath = requestPath;
+    try {
+        decodedPath = decodeURIComponent(requestPath);
+    } catch (_) {
+        // keep original if decode fails
+    }
+
+    const safePath = path.normalize(decodedPath).replace(/^(\.\.[/\\])+/, '');
     let filePath = path.join(ROOT_DIR, safePath);
     if (filePath.endsWith(path.sep)) {
         filePath = path.join(filePath, 'index.html');
