@@ -784,16 +784,24 @@ textarea.form__control {
 .filter input[type="search"],
 .filter select,
 .filter input[type="range"] {
-    border: none;
-    background: transparent;
+    border: 1px solid rgba(243, 195, 75, 0.35);
+    background: rgba(58, 15, 29, 0.9);
     font-family: var(--font-sans);
     color: var(--color-text);
     padding: 4px 6px;
     min-width: 120px;
+    border-radius: var(--radius-sm);
 }
 
 .filter input::placeholder {
     color: var(--color-text-muted);
+}
+
+.filter select:focus,
+.filter input[type="search"]:focus,
+.filter input[type="range"]:focus {
+    outline: 2px solid rgba(243, 195, 75, 0.45);
+    outline-offset: 1px;
 }
 
 .marketplace__sort {

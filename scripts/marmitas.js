@@ -1,11 +1,12 @@
 (function () {
+    const cacheBust = 'v=2';
     const candidateDataUrls = [
-        'marmitas nomeadas/marmitas.json',
-        'marmitas-nomeadas/marmitas.json',
-        'marmitas_nomeadas/marmitas.json',
-        'marmitas/marmitas.json',
-        './marmitas nomeadas/marmitas.json',
-        './marmitas-nomeadas/marmitas.json'
+        `marmitas nomeadas/marmitas.json?${cacheBust}`,
+        `marmitas-nomeadas/marmitas.json?${cacheBust}`,
+        `marmitas_nomeadas/marmitas.json?${cacheBust}`,
+        `marmitas/marmitas.json?${cacheBust}`,
+        `./marmitas nomeadas/marmitas.json?${cacheBust}`,
+        `./marmitas-nomeadas/marmitas.json?${cacheBust}`
     ];
 
     const grid = document.getElementById('productGrid');
@@ -118,9 +119,14 @@
             title.className = 'product-card__title';
             title.textContent = item.name || 'Sem nome';
 
-            const desc = document.createElement('div');
-            desc.className = 'product-card__desc';
-            desc.textContent = item.description || '';
+            body.appendChild(title);
+
+            if (item.description) {
+                const desc = document.createElement('div');
+                desc.className = 'product-card__desc';
+                desc.textContent = item.description;
+                body.appendChild(desc);
+            }
 
             const meta = document.createElement('div');
             meta.className = 'product-card__meta';
@@ -135,8 +141,6 @@
                 meta.appendChild(catBadge);
             });
 
-            body.appendChild(title);
-            body.appendChild(desc);
             body.appendChild(meta);
 
             card.appendChild(img);
@@ -200,7 +204,7 @@
         for (const raw of urls) {
             tried.push(raw);
             try {
-                const res = await fetch(encodeURI(raw));
+                const res = await fetch(encodeURI(raw), { cache: 'no-store' });
                 if (!res.ok) {
                     console.info('catalog fetch failed for', raw, res.status);
                     continue;

@@ -1,50 +1,340 @@
 [
     {
         "id": "m1",
-        "name": "Marmita Tradicional - Frango com Legumes",
-        "description": "Peito de frango grelhado, arroz integral, legumes salteados.",
-        "price": 18.90,
-        "category": "Tradicional",
-        "image": "marmitas-nomeadas/frango-legumes.jpg"
+        "name": "Bacalhau Gratinado",
+        "description": "Bacalhau desfiado com creme e cobertura gratinada.",
+        "categories": [
+            "Peixe",
+            "Pure"
+        ],
+        "image": "Bacalhau gratinado_.jpg"
     },
     {
         "id": "m2",
-        "name": "Marmita Vegetariana - Quinoa e Vegetais",
-        "description": "Quinoa, mix de vegetais assados e molho de ervas.",
-        "price": 21.50,
-        "category": "Vegetariano",
-        "image": "marmitas-nomeadas/quinoa-vegetais.jpg"
+        "name": "Baião de Dois",
+        "description": "Arroz com feijão, queijo e carne-seca em preparo cremoso.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "Baião de Dois_.jpg"
     },
     {
         "id": "m3",
-        "name": "Marmita Fitness - Frango e Batata Doce",
-        "description": "Peito de frango, batata doce assada e salada leve.",
-        "price": 20.00,
-        "category": "Fitness",
-        "image": "marmitas-nomeadas/frango-batatadoce.jpg"
+        "name": "Bobó de Frango",
+        "description": "Frango desfiado em creme de mandioca, cremoso e bem temperado.",
+        "categories": [
+            "Frango",
+            "Pure"
+        ],
+        "image": "Bobo de Frango.jpg"
     },
     {
         "id": "m4",
-        "name": "Marmita Caseira - Carne com Purê",
-        "description": "Carne cozida lenta, purê de batata e brócolis no vapor.",
-        "price": 22.75,
-        "category": "Caseira",
-        "image": "marmitas-nomeadas/carne-pure.jpg"
+        "name": "Escondidinho de Carne-Seca",
+        "description": "Carne-seca desfiada com purê cremoso e gratinado.",
+        "categories": [
+            "Carne",
+            "Pure"
+        ],
+        "image": "Escondidinho de Carne Seca_.jpg"
     },
     {
         "id": "m5",
-        "name": "Marmita Low Carb - Salmão e Legumes",
-        "description": "Salmão grelhado, mix de folhas e legumes salteados.",
-        "price": 29.90,
-        "category": "Low Carb",
-        "image": "marmitas-nomeadas/salmao-legumes.jpg"
+        "name": "Feijoada",
+        "description": "Feijão preto com carnes selecionadas, sabor tradicional.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "Feijoada_.jpg"
     },
     {
         "id": "m6",
-        "name": "Marmita Econômica - Frango com Arroz",
-        "description": "Opção econômica com porção equilibrada.",
-        "price": 14.00,
-        "category": "Econômica",
-        "image": "marmitas-nomeadas/frango-arroz.jpg"
+        "name": "Filé de Frango com Arroz Integral e Brócolis",
+        "description": "Filé de frango grelhado com arroz integral e brócolis.",
+        "categories": [
+            "Frango",
+            "Arroz",
+            "Legumes"
+        ],
+        "image": "Filé de frango,arroz integral e brócolis_.jpg"
+    },
+    {
+        "id": "m7",
+        "name": "Frango em Cubos com Batata-Doce",
+        "description": "Cubos de frango suculentos com batata-doce macia.",
+        "categories": [
+            "Frango",
+            "Batata"
+        ],
+        "image": "Frango em cubos e Batata Doce_.jpg"
+    },
+    {
+        "id": "m8",
+        "name": "Lagarto Recheado ao Molho",
+        "description": "Lagarto recheado servido com molho encorpado.",
+        "categories": [
+            "Carne",
+            "Pure"
+        ],
+        "image": "Lagarto recheado ao molho_.jpg"
+    },
+    {
+        "id": "m9",
+        "name": "Lasanha Bolonhesa",
+        "description": "Lasanha clássica com molho bolonhesa e queijo gratinado.",
+        "categories": [
+            "Carne",
+            "Macarrao"
+        ],
+        "image": "Lasanha Bolonhesa_.jpg"
+    },
+    {
+        "id": "m10",
+        "name": "Lasanha 4 Queijos com Brócolis",
+        "description": "Lasanha cremosa de quatro queijos com brócolis.",
+        "categories": [
+            "Vegetariano",
+            "Macarrao",
+            "Legumes"
+        ],
+        "image": "Lasanha de 4Queijos e brócolis_.jpg"
+    },
+    {
+        "id": "m11",
+        "name": "Lasanha de Espinafre",
+        "description": "Lasanha leve com espinafre e molho suave.",
+        "categories": [
+            "Vegetariano",
+            "Macarrao",
+            "Legumes"
+        ],
+        "image": "Lasanha de Espinafre_.jpg"
+    },
+    {
+        "id": "m12",
+        "name": "Lasanha de Legumes",
+        "description": "Lasanha recheada com legumes frescos.",
+        "categories": [
+            "Vegetariano",
+            "Macarrao",
+            "Legumes"
+        ],
+        "image": "Lasanha de Legumes_.jpg"
+    },
+    {
+        "id": "m13",
+        "name": "Macarrão Integral com Almôndegas",
+        "description": "Macarrão integral servido com almôndegas ao molho.",
+        "categories": [
+            "Carne",
+            "Macarrao"
+        ],
+        "image": "Macarrão Integral com Almôndegas_.jpg"
+    },
+    {
+        "id": "m14",
+        "name": "Panqueca de Carne",
+        "description": "Panqueca recheada com carne moída bem temperada.",
+        "categories": [
+            "Carne",
+            "Macarrao"
+        ],
+        "image": "Panqueca de Carne_.jpg"
+    },
+    {
+        "id": "m15",
+        "name": "Panqueca de Frango",
+        "description": "Panqueca recheada com frango desfiado e molho suave.",
+        "categories": [
+            "Frango",
+            "Macarrao"
+        ],
+        "image": "Panqueca de Frango_.jpg"
+    },
+    {
+        "id": "m16",
+        "name": "Parmegiana de Frango",
+        "description": "Filé de frango empanado com molho de tomate e queijo gratinado.",
+        "categories": [
+            "Frango",
+            "Macarrao"
+        ],
+        "image": "Parmegiana de Frango.jpg"
+    },
+    {
+        "id": "m17",
+        "name": "Patinho Moído com Batata-Doce",
+        "description": "Patinho moído bem temperado com batata-doce.",
+        "categories": [
+            "Carne",
+            "Batata"
+        ],
+        "image": "Patinho moído e Batata Doce_.jpg"
+    },
+    {
+        "id": "m18",
+        "name": "Peixe ao Molho de Camarão",
+        "description": "Filé de peixe servido com molho cremoso de camarão.",
+        "categories": [
+            "Peixe",
+            "Arroz",
+            "Frutos do mar"
+        ],
+        "image": "Peixe ao molho de camarão_.jpg"
+    },
+    {
+        "id": "m19",
+        "name": "Peixe Grelhado com Purê de Mandioquinha",
+        "description": "Peixe grelhado com purê leve de mandioquinha.",
+        "categories": [
+            "Peixe",
+            "Pure",
+            "Grelhado"
+        ],
+        "image": "Peixe grelhado com Purê de Mandioquinha_.jpg"
+    },
+    {
+        "id": "m20",
+        "name": "Pernil Refogado",
+        "description": "Pernil suculento refogado lentamente.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "Pernil Refogado_.jpg"
+    },
+    {
+        "id": "m21",
+        "name": "Picadinho de Carne",
+        "description": "Cubos de carne macios com molho caseiro.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "Picadinho de Carne_.jpg"
+    },
+    {
+        "id": "m22",
+        "name": "Risoto de Calabresa",
+        "description": "Risoto cremoso com calabresa dourada.",
+        "categories": [
+            "Porco",
+            "Arroz"
+        ],
+        "image": "Risoto de Calabresa_.jpg"
+    },
+    {
+        "id": "m23",
+        "name": "Risoto de Camarão",
+        "description": "Arroz cremoso preparado com camarões selecionados.",
+        "categories": [
+            "Peixe",
+            "Arroz",
+            "Frutos do mar"
+        ],
+        "image": "Risoto de Camarão_.jpg"
+    },
+    {
+        "id": "m24",
+        "name": "Risoto de Frango",
+        "description": "Arroz cremoso preparado com frango desfiado.",
+        "categories": [
+            "Frango",
+            "Arroz"
+        ],
+        "image": "Risoto de Frango_.jpg"
+    },
+    {
+        "id": "m25",
+        "name": "Virado à Paulista",
+        "description": "Carne servida com preparo tradicional paulista.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "Virado à Paulista_.jpg"
+    },
+    {
+        "id": "m26",
+        "name": "Bife à Rolê",
+        "description": "Bife recheado cozido lentamente em molho saboroso.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "bife a role.png"
+    },
+    {
+        "id": "m27",
+        "name": "Carne-Seca",
+        "description": "Carne-seca dessalgada e preparada de forma tradicional.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "carne seca.png"
+    },
+    {
+        "id": "m28",
+        "name": "Escondidinho de Frango",
+        "description": "Frango desfiado coberto com purê cremoso.",
+        "categories": [
+            "Frango",
+            "Pure"
+        ],
+        "image": "escond frango.png"
+    },
+    {
+        "id": "m29",
+        "name": "Estrogonofe de Carne",
+        "description": "Carne em tiras ao molho cremoso clássico.",
+        "categories": [
+            "Carne",
+            "Arroz"
+        ],
+        "image": "estrog carne.png"
+    },
+    {
+        "id": "m30",
+        "name": "Estrogonofe de Frango",
+        "description": "Frango em cubos ao molho cremoso clássico.",
+        "categories": [
+            "Frango",
+            "Arroz"
+        ],
+        "image": "estrog frango.png"
+    },
+    {
+        "id": "m31",
+        "name": "Lasanha de Berinjela",
+        "description": "Lasanha de berinjela com molho e queijo.",
+        "categories": [
+            "Vegetariano",
+            "Macarrao",
+            "Berinjela"
+        ],
+        "image": "lasanha berinjela.png"
+    },
+    {
+        "id": "m32",
+        "name": "Panqueca de Palmito",
+        "description": "Panqueca recheada com palmito ao molho leve.",
+        "categories": [
+            "Vegetariano",
+            "Macarrao"
+        ],
+        "image": "panqueca palmito.png"
+    },
+    {
+        "id": "m33",
+        "name": "Parmegiana de Carne",
+        "description": "Carne empanada com molho de tomate e queijo gratinado.",
+        "categories": [
+            "Carne",
+            "Macarrao"
+        ],
+        "image": "parme carne.png"
     }
 ]
